@@ -1,6 +1,6 @@
 ## Wtf is this?
 
-Nameless is a content management system and blogging platform built on Git and GitHub. It's a loose collection of applications, each meant to handle its own task well.  
+Patchwork is a content management system and blogging platform built on Git and GitHub. It's a loose collection of applications, each meant to handle its own task well.  
 
 The current collection includes a content repository in GitHub, an indexer application, and a presentation application. The content repository holds a set of text files written in Markdown in a simple directory structure. The indexer parses the markdown files and updates a MongoDB database (and, optionally, an IndexTank API-compatible search index). The presenter is the final web server that serves the content out of the database to end-users.
 

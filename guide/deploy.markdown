@@ -1,5 +1,5 @@
 ---
-title: How to Deploy Nameless CMS
+title: How to Deploy Patchwork
 weight: 1
 ---
 
