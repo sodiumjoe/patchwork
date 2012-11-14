@@ -21,7 +21,7 @@ The current collection includes:
 
 ## Who do you think you are? 
 
-[@joebadmo](https://github.com/joebadmo)
-[@davidkofahl](https://github.com/davidkofahl)
+* [@joebadmo](https://github.com/joebadmo)
+* [@davidkofahl](https://github.com/davidkofahl)
 
 Just a couple of n00b chumps, learning as we go.  
