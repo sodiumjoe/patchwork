@@ -1,6 +1,6 @@
 ---
 title: "Guide"
-weight: 1
+weight: 4
 ---
 
 Here's a guide. 
