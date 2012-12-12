@@ -14,9 +14,17 @@ The current collection includes:
 
 ## Uh... how does it work?
 
-You only really need three pieces: a content repo, Thread, and Quilt. Once you have it set up, Thread reads the content repo, parses the markdown files, and updates a database, an IndexTank API-compatible search index, and uploads specified assets to an Amazon S3 bucket. Quilt then serves the content. 
+You only really need three pieces: a content repo, Thread, and Quilt. Once you have it set up, Thread does the following: 
 
-You can also set up a post-receive webhook on the content repo, so whenever you push new content to that repo, the resulting site served by Quilt automatically gets updated. 
+* Reads from the content repo.
+* Parses the markdown files into HTML.
+* Updates a database.
+* Updates an IndexTank API-compatible search index.
+* Uploads specified assets to an Amazon S3 bucket. 
+
+Quilt then serves the content from the database.
+
+You can also set up a [post-receive webhook](https://help.github.com/articles/post-receive-hooks) on the content repo, so whenever you push new content to that repo, the resulting site served by Quilt automatically gets updated. 
 
 ## Why? Why? Whyyyyyy???
 
