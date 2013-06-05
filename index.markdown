@@ -4,7 +4,7 @@ title: "Patchwork"
 
 ## Wtf is this?
 
-Patchwork content management system and blogging platform built on Git and GitHub. It's a loose collection of applications, each meant to handle one piece of content management.  
+Patchwork content management system and blogging platform built on Git and GitHub. It's a loose collection of applications, each meant to handle one piece of content management. 
 
 The current collection includes:
 
@@ -15,9 +15,17 @@ The current collection includes:
 
 ## Uh... how does it work?
 
-You only really need three pieces: a content repo, Thread, and Quilt. Once you have it set up, Thread reads the content repo, parses the markdown files, and updates a database, an IndexTank API-compatible search index, and uploads specified assets to an Amazon S3 bucket. Quilt then serves the content. 
+You only really need three pieces: a content repo, Thread, and Quilt. Once you have it set up, Thread does the following:
 
-You can also set up a post-receive webhook on the content repo, so whenever you push new content to that repo, the resulting site served by Quilt automatically gets updated. 
+* Reads from the content repo.
+* Parses the markdown files into HTML.
+* Updates a database.
+* Updates an IndexTank API-compatible search index.
+* Uploads specified assets to an Amazon S3 bucket.
+
+Quilt then serves the content from the database.
+
+You can also set up a [post-receive webhook](https://help.github.com/articles/post-receive-hooks) on the content repo, so whenever you push new content to that repo, the resulting site served by Quilt automatically gets updated.
 
 ## Why? Why? Whyyyyyy???
 
@@ -28,13 +36,13 @@ We hate web-based text editors. We like to use our own text editors. We also lik
 Jekyll is great! It was one of the inspirations for this project. But there are a few things we don't like about it:
 
 * Static sites are fast and easy to understand, but somewhat inflexible.
-* It's not easy to set up on a modern PaaS. 
+* It's not easy to set up on a modern PaaS.
 * The content is mixed up with code, configuration, and metadata, which makes collaboration less than straightforward.
 
-## Why all the different pieces? 
+## Why all the different pieces?
 
 We were kind of tired of large, monolithic frameworks. We wanted a logical separation of concerns that would allow us to switch out different pieces for different purposes.
 
-## Who do you think you are? 
+## Who do you think you are?
 
 We're [@joebadmo](https://github.com/joebadmo) & [@davidkofahl](https://github.com/davidkofahl). We're learning as we go.
